@@ -1,0 +1,595 @@
+.content {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 82px - 45px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .logs {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 0 40px;
+    width: 100%;
+    height: calc(100% - 80px);
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+
+    .header {
+      display: flex;
+      align-items: center;
+
+      .title {
+        margin: 45px 0 45px 35px;
+        font-family: "Sparkasse Web", sans-serif;
+        font-size: 34px;
+        line-height: 45px;
+        font-weight: 400;
+        color: #959595;
+      }
+
+      .searchContainer {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: 30px;
+
+        label {
+          margin: 0;
+          padding: 0;
+          font-family: "Sparkasse Web", sans-serif;
+          font-size: 14px;
+          line-height: 18px;
+          font-weight: 400;
+          color: #959595;
+        }
+
+        input {
+          width: 350px;
+          margin: 0;
+          padding: 10px 20px;
+          font-family: "Sparkasse Web", sans-serif;
+          font-size: 14px;
+          line-height: 18px;
+          font-weight: 400;
+          color: #e2e2e2;
+          background-color: #fff;
+          outline: none;
+          border: 1px solid #f3f3f3;
+          border-radius: 8px;
+
+          &::placeholder {
+            color: #e2e2e2;
+          }
+        }
+      }
+    }
+
+    .table {
+      position: relative;
+      display: grid;
+      grid-template-rows: auto;
+      grid-gap: 1px;
+      width: 100%;
+
+      header > div {
+        background-color: #f3f3f3;
+
+        &.card {
+          letter-spacing: unset !important;
+        }
+      }
+
+      .tableRow {
+        position: relative;
+        display: grid;
+        grid-template-columns: 41px 1fr 1fr 1fr 41px;
+        grid-gap: 1px;
+
+        & > * {
+          display: flex;
+          align-items: center;
+          padding: 10px 0;
+          font-family: "Sparkasse Web", sans-serif;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 400;
+          box-shadow: 0 0 0 1px #ebebeb;
+          color: #959595;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden
+        }
+
+        .id {
+          justify-content: center;
+          text-align: center;
+        }
+
+        .firstname,
+        .lastname {
+          padding: 0 15px;
+          text-align: left;
+
+          a {
+            color: #959595;
+          }
+        }
+
+        .done {
+          padding: 0 10px;
+          justify-content: center;
+          text-align: center;
+
+          .icon {
+            width: 20px;
+            fill: #ff0000;
+          }
+        }
+
+        .card {
+          padding: 0 10px;
+          justify-content: center;
+          text-align: center;
+          letter-spacing: 3px;
+        }
+
+        .questions .icon.disabled {
+          fill: #f3f3f3;
+        }
+
+        .menuSwitch {
+          cursor: pointer;
+          justify-content: center;
+
+          .icon {
+            width: 12px;
+            fill: #959595;
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .menu {
+          display: none;
+          box-shadow: none;
+        }
+
+        &.active {
+          & > * {
+            color: #fff;
+            background-color: #ffb3c7;
+            box-shadow: 0 0 0 1px #ffb3c7;
+          }
+
+          .menuSwitch {
+            background-color: #fff;
+            box-shadow: none;
+          }
+
+          .questions .icon {
+            fill: #fff;
+          }
+
+          .questions .icon.disabled {
+            fill: #d9d9d9;
+          }
+
+          .checked .icon {
+            fill: #fff;
+          }
+
+          .money span {
+            color: #fff !important;
+          }
+
+          .bankLink a {
+            color: #fff;
+          }
+
+          .menu {
+            z-index: 1;
+            position: absolute;
+            top: calc(100% - 1px);
+            left: -1px;
+            right: 0;
+            width: calc(100% + 2px);
+            margin: 0;
+            padding: 30px 0;
+            background-color: #fff;
+            box-shadow: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-left: 1px solid #ebebeb;
+            border-right: 1px solid #ebebeb;
+
+            .bottomRow {
+              width: 100%;
+              display: flex;
+            }
+
+            .smsLink {
+              opacity: 0;
+              position: relative;
+              margin: 20px auto 20px calc(((100% - (425px + 425px + 319px)) / 3) / 2);
+              padding: 20px 20px 20px 15px;
+              border: 1px solid #ebebeb;
+              width: 30%;
+              display: flex;
+              align-content: center;
+              justify-content: center;
+              flex-direction: column;
+
+              & > span {
+                user-select: none;
+                position: absolute;
+                top: -9px;
+                left: 10px;
+                padding: 0 5px;
+                font-family: "Sparkasse Web", sans-serif;
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: 400;
+                color: #959595;
+                background-color: #fff;
+              }
+
+              div {
+                position: relative;
+                display: flex;
+
+                p {
+                  width: calc(100% - 12px);
+                  margin: 0;
+                  padding: 0;
+                  font-family: "Sparkasse Web", sans-serif;
+                  font-size: 14px;
+                  line-height: 18px;
+                  font-weight: 400;
+                  color: #959595;
+                  white-space: nowrap;
+                  text-align: left;
+                  text-overflow: ellipsis;
+                  overflow:hidden;
+                }
+
+                .icon {
+                  cursor: pointer;
+                  margin-left: 20px;
+                  width: 12px;
+                  height: 16px;
+                  fill: #e1e1e1;
+                  display: flex;
+                  align-items: center;
+                  transition: fill 0.3s ease;
+
+                  &:hover {
+                    fill: #ffb3c7;
+                  }
+                }
+              }
+            }
+
+            .ip {
+              position: relative;
+              margin: 20px 25px;
+              padding: 20px 20px 20px 15px;
+              border: 1px solid #ebebeb;
+              width: 30%;
+              display: flex;
+              align-content: center;
+              justify-content: center;
+              flex-direction: column;
+
+              & > span {
+                user-select: none;
+                position: absolute;
+                top: -9px;
+                left: 10px;
+                padding: 0 5px;
+                font-family: "Sparkasse Web", sans-serif;
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: 400;
+                color: #959595;
+                background-color: #fff;
+              }
+
+              div {
+                position: relative;
+                display: flex;
+
+                p {
+                  width: calc(100% - 12px);
+                  margin: 0;
+                  padding: 0;
+                  font-family: "Sparkasse Web", sans-serif;
+                  font-size: 14px;
+                  line-height: 18px;
+                  font-weight: 400;
+                  color: #959595;
+                  white-space: nowrap;
+                  text-align: left;
+                  text-overflow: ellipsis;
+                  overflow:hidden;
+                }
+
+                .icon {
+                  cursor: pointer;
+                  margin-left: 20px;
+                  width: 12px;
+                  height: 16px;
+                  fill: #e1e1e1;
+                  display: flex;
+                  align-items: center;
+                  transition: fill 0.3s ease;
+
+                  &:hover {
+                    fill: #ffb3c7;
+                  }
+                }
+              }
+            }
+
+            .userAgent {
+              position: relative;
+              margin: 20px calc(((100% - (425px + 425px + 319px)) / 3) / 2) 20px auto;
+              padding: 20px 20px 20px 15px;
+              border: 1px solid #ebebeb;
+              width: 30%;
+              display: flex;
+              align-content: center;
+              justify-content: center;
+              flex-direction: column;
+
+              & > span {
+                user-select: none;
+                position: absolute;
+                top: -9px;
+                left: 10px;
+                padding: 0 5px;
+                font-family: "Sparkasse Web", sans-serif;
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: 400;
+                color: #959595;
+                background-color: #fff;
+              }
+
+              div {
+                position: relative;
+                display: flex;
+
+                p {
+                  width: calc(100% - 12px);
+                  margin: 0;
+                  padding: 0;
+                  font-family: "Sparkasse Web", sans-serif;
+                  font-size: 14px;
+                  line-height: 18px;
+                  font-weight: 400;
+                  color: #959595;
+                  white-space: nowrap;
+                  text-align: left;
+                  text-overflow: ellipsis;
+                  overflow:hidden;
+                }
+
+                .icon {
+                  cursor: pointer;
+                  margin-left: 20px;
+                  width: 12px;
+                  height: 16px;
+                  fill: #e1e1e1;
+                  display: flex;
+                  align-items: center;
+                  transition: fill 0.3s ease;
+
+                  &:hover {
+                    fill: #ffb3c7;
+                  }
+                }
+              }
+            }
+
+            .data {
+              position: relative;
+              margin: 0 auto;
+              padding: 92px 35px 92px 15px;
+              border: 1px solid #ebebeb;
+              width: 425px;
+              height: 202px;
+              display: flex;
+              align-content: center;
+              justify-content: center;
+              flex-direction: column;
+
+              & > span {
+                user-select: none;
+                position: absolute;
+                top: -9px;
+                left: 10px;
+                padding: 0 5px;
+                font-family: "Sparkasse Web", sans-serif;
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: 400;
+                color: #959595;
+                background-color: #fff;
+              }
+
+              .wrapper {
+                margin: 2.5px 0;
+                display: flex;
+                align-items: center;
+
+                .name {
+                  margin: 0 auto 0 0;
+                  padding: 0;
+                  font-family: "Sparkasse Web", sans-serif;
+                  font-size: 14px;
+                  line-height: 18px;
+                  font-weight: 400;
+                  color: #959595;
+                }
+
+                .value {
+                  margin: 0 0 0 35px;
+                  padding: 0;
+                  font-family: "Sparkasse Web", sans-serif;
+                  font-size: 14px;
+                  line-height: 18px;
+                  font-weight: 400;
+                  color: #959595;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow:hidden;
+
+                  &.spacing {
+                    letter-spacing: 3px;
+                    margin-right: -3px;
+                  }
+                }
+              }
+            }
+
+            .questionData {
+              position: relative;
+              margin: 0 auto;
+              padding: 92px 15px;
+              border: 1px solid #ebebeb;
+              width: 425px;
+              height: 202px;
+              display: flex;
+              align-content: center;
+              justify-content: center;
+              flex-direction: column;
+
+              & > span {
+                user-select: none;
+                position: absolute;
+                top: -9px;
+                left: 10px;
+                padding: 0 5px;
+                font-family: "Sparkasse Web", sans-serif;
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: 400;
+                color: #959595;
+                background-color: #fff;
+              }
+
+              .wrapper {
+                margin: 2.5px 0;
+                display: flex;
+                align-items: center;
+
+                .name {
+                  margin: 0 auto 0 0;
+                  padding: 0;
+                  font-family: "Sparkasse Web", sans-serif;
+                  font-size: 14px;
+                  line-height: 18px;
+                  font-weight: 400;
+                  color: #959595;
+                }
+
+                .value {
+                  margin: 0 0 0 auto;
+                  padding: 0;
+                  font-family: "Sparkasse Web", sans-serif;
+                  font-size: 14px;
+                  line-height: 18px;
+                  font-weight: 400;
+                  color: #959595;
+                }
+              }
+            }
+
+            .interactions {
+              position: relative;
+              margin: 0 auto;
+              padding: 92px 51px;
+              border: 1px solid #ebebeb;
+              height: 202px;
+
+              & > span {
+                user-select: none;
+                position: absolute;
+                top: -9px;
+                left: 10px;
+                padding: 0 5px;
+                font-family: "Sparkasse Web", sans-serif;
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: 400;
+                color: #959595;
+                background-color: #fff;
+              }
+
+              button,
+              a {
+                margin: 0 7.5px;
+                position: relative;
+                display: inline-block;
+                outline: none;
+                border: none;
+                background-color: transparent;
+
+                .icon {
+                  cursor: pointer;
+                  position: relative;
+                  height: 18px;
+                  display: flex;
+                  align-items: center;
+                  fill: #e1e1e1;
+                  transition: fill 0.3s ease;
+
+                  &:hover {
+                    fill: #ffb3c7;
+                  }
+
+                  svg {
+                    height: 100%;
+                  }
+                }
+
+                span {
+                  position: absolute;
+                  left: 50%;
+                  bottom: -20px;
+                  width: 120px;
+                  text-align: center;
+                  margin-left: -60px;
+                  font-family: "Sparkasse Web", sans-serif;
+                  font-size: 11px;
+                  line-height: 11px;
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #ffb3c7;
+                  opacity: 0;
+                  transition: opacity 0.3s ease;
+                }
+
+                &:hover span {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1245px) {
+  .menu .smsLink {
+    margin-left: 0 !important;
+  }
+
+  .menu .userAgent {
+    margin-right: 0 !important;
+  }
+}

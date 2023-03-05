@@ -1,0 +1,135 @@
+.container, .container * {
+  box-sizing: border-box;
+  overflow-anchor: none;
+}
+
+.container {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 40;
+
+  .pageInfo {
+    height: auto;
+
+    .background {
+      background-position: right center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: rgb(255, 230, 204);
+      overflow: visible;
+
+      .switcher {
+        width: 100%;
+        height: 75px;
+
+        .links {
+          display: flex;
+          font-size: 18px;
+          padding: 23px 0 0 10px;
+
+          .link {
+            font-family: "Klarna Text", sans-serif;
+            font-weight: 500;
+            line-height: 25px;
+            color: black;
+            border-bottom: 2px solid black;
+            padding-bottom: 25px;
+            margin: 0 12px;
+            cursor: pointer;
+
+            .hyperlink {
+              display: inline;
+              color: inherit;
+              display: -webkit-inline-flex;
+              display: inline-flex;
+              -webkit-align-items: flex-start;
+              align-items: flex-start;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nav {
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 75px;
+    padding: 28px 25px;
+    width: 100%;
+
+    .logo {
+      display: -webkit-flex;
+      display: flex;
+      margin-right: auto;
+      transition: all 0.2s ease 0s;
+
+      .hyperlink {
+        color: inherit;
+        display: -webkit-inline-flex;
+        display: inline-flex;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+        text-decoration: none;
+
+        .hyperlinkWrap {
+          display: inline-block;
+
+          .graphic {
+            display: -webkit-flex;
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+  .container .nav {
+    max-width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .logo {
+      margin-right: 28px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .container .nav .logo {
+    display: inline-block;
+
+    .hyperlink .hyperlinkWrap .graphic {
+      display: inline-block;
+    }
+  }
+
+  .container .pageInfo .background .switcher {
+    width: 100%;
+    height: 35px;
+
+    .links {
+      display: flex;
+      font-size: 14px;
+      padding: 7px 0 0 13px;
+      font-weight: 500;
+
+      .link {
+        color: black;
+        opacity: 1;
+        border-bottom: 2px solid black;
+        margin: 0 12px;
+        padding-bottom: 1px;
+        cursor: pointer;
+      }
+    }
+  }
+}

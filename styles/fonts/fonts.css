@@ -1,0 +1,168 @@
+/*@font-face {
+  font-family: "Sparkasse Web";
+  src: url("./Sparkasse Rg Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sparkasse Web";
+  src: url("./Sparkasse Rg Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}*/
+
+@font-face {
+  font-family: "Sparkasse Web";
+  src: url("./Sparkasse_web_Bd.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Sparkasse Web";
+  src: url("./Sparkasse_web_Rg.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sparkasse Web";
+  src: url("./Sparkasse_web_Lt.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sparkasse Web";
+  src: url("./Sparkasse_web_Md.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sparkasse Web Head";
+  src: url("./SparkasseHead_web_Rg.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Icons-IF";
+  src: url(./icons-if.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pictos-IF";
+  src: url(./pictos-if.ttf) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Klarna Display";
+  src: url("./KlarnaDisplay-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Klarna Greek";
+  src: url("./KlarnaGreek-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Klarna Greek";
+  src: url("./KlarnaGreek-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Klarna Greek";
+  src: url("./KlarnaGreek-Display.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Klarna Greek";
+  src: url("./KlarnaGreek-DisplayItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Klarna Greek";
+  src: url("./KlarnaGreek-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Klarna Greek";
+  src: url("./KlarnaGreek-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Klarna Greek";
+  src: url("./KlarnaGreek-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Klarna Greek";
+  src: url("./KlarnaGreek-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Klarna Text";
+  src: url("./KlarnaText-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Klarna Text";
+  src: url("./KlarnaText-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Klarna Text";
+  src: url("./KlarnaText-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Klarna Text";
+  src: url("./KlarnaText-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Klarna Text";
+  src: url("./KlarnaText-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Klarna Text";
+  src: url("./KlarnaText-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}

@@ -1,0 +1,252 @@
+.container, .container * {
+  box-sizing: border-box;
+  overflow-anchor: none;
+}
+
+.container {
+  overflow-x: hidden;
+  background-color: #ffe6cc;
+
+  .section {
+    .spacer {
+      padding-bottom: 56px;
+    }
+
+    .siteWidth {
+      width: 100%;
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 25px;
+      padding-right: 25px;
+
+      .row {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -1.5625rem;
+        margin-left: -1.5625rem;
+
+        .column {
+          margin-left: 1.5625rem;
+          margin-right: 1.5625rem;
+          width: calc(50% - 3.125rem);
+          -webkit-justify-content: center;
+          justify-content: center;
+          margin-bottom: 3.125rem;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-flex-direction: column;
+          flex-direction: column;
+          -webkit-align-items: flex-start;
+          align-items: flex-start;
+
+          .art {
+            display: block;
+            width: 100%;
+
+            .image {
+              position: relative;
+              width: 100%;
+              height: 0;
+              display: block;
+
+              img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                max-width: 100%;
+                -webkit-flex-shrink: 0;
+                flex-shrink: 0;
+              }
+            }
+          }
+
+          .component {
+            h2 {
+              font-size: 36px;
+              line-height: 42px;
+              font-family: "Klarna Display", sans-serif;
+              font-weight: 600;
+              margin: 0;
+              -webkit-hyphens: manual;
+              -moz-hyphens: manual;
+              -ms-hyphens: manual;
+              hyphens: manual;
+              word-break: break-word;
+              white-space: pre-wrap;
+            }
+
+            .spacer {
+              padding-bottom: 16px;
+            }
+
+            .spacer2 {
+              padding-bottom: 32px;
+            }
+
+            p {
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 30px;
+              color: #171717;
+              display: block;
+              max-width: 100%;
+              width: 100%;
+              margin: 0;
+              font-family: "Klarna Text", sans-serif;
+              word-break: break-word;
+              -webkit-font-smoothing: antialiased;
+            }
+
+            .buttonGroup {
+              margin-top: 0;
+              display: -webkit-flex;
+              display: flex;
+
+              .buttonGroupWrap {
+                margin-bottom: -1.5625rem;
+                -webkit-align-items: center;
+                align-items: center;
+                -webkit-flex-wrap: wrap;
+                flex-wrap: wrap;
+
+                & > * {
+                  margin-bottom: 1.5625rem;
+                }
+
+                .hyperlink {
+                  color: inherit;
+                  display: -webkit-inline-flex;
+                  display: inline-flex;
+                  -webkit-align-items: flex-start;
+                  align-items: flex-start;
+                  text-decoration: none;
+
+                  .hyperlinkWrap {
+                    display: inline-block;
+                  }
+                }
+
+                & > :not(:last-child) {
+                  margin-right: 1.5625rem;
+                }
+              }
+            }
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .container .section .siteWidth .row {
+    margin-bottom: -25px;
+    margin-left: -12.5px;
+    margin-right: -12.5px;
+
+    .column {
+      margin-left: 12.5px;
+      margin-right: 12.5px;
+      width: calc(50% - 25px);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .container .section .siteWidth .row {
+    margin-bottom: -25px;
+    margin-left: -12.5px;
+    margin-right: -12.5px;
+
+    .column {
+      margin-left: 1.5625rem;
+      margin-right: 1.5625rem;
+      width: calc(66.66667% - 3.125rem);
+    }
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 850px) {
+  .container .section .siteWidth .row .column {
+    margin-left: 12.5px;
+    margin-right: 12.5px;
+    width: calc(66.66667% - 25px);
+  }
+}
+
+@media (max-width: 600px) {
+  .container .section .siteWidth .row .column {
+    margin-left: 1.5625rem;
+    margin-right: 1.5625rem;
+    width: calc(100% - 3.125rem);
+  }
+}
+
+@media (max-width: 600px) and (max-width: 850px) {
+  .container .section .siteWidth .row .column {
+    margin-left: 12.5px;
+    margin-right: 12.5px;
+    width: calc(100% - 25px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .container .section .siteWidth .row .largeColumn {
+    margin-left: 1.5625rem;
+    margin-right: 1.5625rem;
+    width: calc(100% - 3.125rem);
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 850px) {
+  .container .section .siteWidth .row .largeColumn {
+    margin-left: 12.5px;
+    margin-right: 12.5px;
+    width: calc(100% - 25px);
+  }
+}
+
+
+@media (min-width: 600px) {
+  .container .section .spacer {
+    padding-bottom: 56px;
+  }
+
+  .container .section .siteWidth .row .column .component {
+    h2 {
+      font-size: 56px;
+      line-height: 65px;
+    }
+  }
+}
+
+@media (min-width: 850px) {
+  .container .section .spacer {
+    padding-bottom: 64px;
+  }
+
+  .container .section .siteWidth {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container .section .siteWidth {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
